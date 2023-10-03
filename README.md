@@ -29,7 +29,7 @@ To run this project run
 
 ## Content
 
-This repo contains a webpack project, which includes an index file, an external module, generateJoke (which uses axios third party library to make an api call and fetch a new joke from https://icanhazdadjoke.com/).
+This repo contains a webpack project, which includes an index file, an external module, generateJoke (which uses axios third party library to make an api call and fetch a new joke from https://icanhazdadjoke.com/). This joke is printed
 
 It also includes a counter which gets incremented every 500ms. This is included to demonstrate the web worker which traverses through a large loop, but this doesn't impact
 the counter because it runs on a separate thread.
