@@ -1,1 +1,1 @@
-# web_pack-starter
+# Web Pack-starter
