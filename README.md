@@ -1,3 +1,3 @@
-# Web Pack Starter
+# Webpack Starter
 
 
