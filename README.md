@@ -34,9 +34,9 @@ This repo contains a webpack project, which includes an index file, an external 
 It also includes a counter which gets incremented every 500ms. This is included to demonstrate the web worker which traverses through a large loop, but this doesn't impact
 the counter because it runs on a separate thread.
 
-A custom loader, my-loader is added, which is used to load images, but whatever image is loaded, this loader returns a laughing emoji svg. This is used to demonstrate the loader capability. Loader is a function that receives source file content as string and returns the target file content. So whatever image is trying to load, this loader transfroms it into another image(laughing emoji) and returns it. To demonstrate this, an image facebook.svg is trying to be loaded in the index.js but a laughing emoji image is actually loaded.
+A custom loader, *my-loader* is added, which is used to load images, but whatever image is loaded, this loader returns a laughing emoji svg. This is used to demonstrate the loader capability. Loader is a function that receives source file content as string and returns the target file content. So whatever image is trying to load, this loader transfroms it into another image(laughing emoji) and returns it. To demonstrate this, an image facebook.svg is trying to be loaded in the index.js but a laughing emoji image is actually loaded.
 
-A custom plugin is included to check the size of the total chunk generated. The plugin creates an asset statsAsset into which it writes the statistics of the build process. Plugin is a class that has an apply method, into which the compiler object is passed. 
+A custom plugin, *statsPlugin*, is included to check the size of the total chunk generated. The plugin creates an asset statsAsset into which it writes the statistics of the build process. Plugin is a class that has an apply method, into which the compiler object is passed. 
 Plugins can tap into different lifecycle hooks of the compiler. So this plugin taps into *emit* lifecycle hook and gets the stats. Later in index.js, this staticAsset file is loaded through fetch and the chunk size is written on to the html. Another plugin myPlugin simply consoles these stats.
 
 
